@@ -1,0 +1,2 @@
+sudo cp -r .git * /root/webfile
+if sudo docker ps | grep mytestos; then echo "Done"; else  sudo docker run -dit --name mytestos -p 1235:80 -v /root/webfile:/usr/local/apache2/htdocs/ httpd ; fi
