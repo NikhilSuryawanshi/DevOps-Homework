@@ -1,0 +1,6 @@
+git checkout master
+git merge origin/dev1
+git push https://user:password@github.com/NikhilSuryawanshi/webtest.git --all
+
+sudo cp -r * /root/webfile1/
+if sudo docker ps | grep myproductionos; then echo "Done"; else  sudo docker run -dit --name myproductionos -p 1236:80 -v /root/webfile1:/usr/local/apache2/htdocs/ httpd ; fi
